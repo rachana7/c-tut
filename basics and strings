@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+int main() {
+
+int x=2;
+int y=3;
+//static_cast is used to cast the output
+cout<<(static_cast<double>x/y)<<endl;
+
+
+name:
+string t;
+cout<<"enter your name"<<endl;
+cin>>t;
+
+//if you input rachana reddy it takes just rachana and not reddy
+//to take both we use getline()
+
+getline(cin,t);
+//this will take rachana reddy into t
+
+//************************************
+//concatination of strings
+//.append(string) is also same as concatenation
+string first="rachana";
+string last="reddy";
+cout<<first+last<<endl;
+cout<<first.append(last)<<endl;
+//outputs rachanareddy
+//**********************
+//.length() or .size() gives the same result
+//.at(int) gives the charachter at a particular index
+cout<<first.length()<<endl;
+cout<<first.size()<<endl;
+cout<<first.at(4)<<endl;
+**************************************
+//.insert(index,string,start,length)
+//it inserts a partcular part of the string to a particular part of another string
+cout<<first.insert(3,last);
+//output:racreddyhana
+cout<<first.insert(3,last,0,3);
+//output:racredhana
+*******************************************************
+
+//comparision operators:
+// || && ^ (or and xor)
+
+int test=85;
+//if(test>80)||(test>90) returns true;
+//if(test>80)&&(test>90) returns false;
+//if(test>80)^(test>90) returns true;//only one of the two statements can be true
+
+
+
+
+
+
+return 0;
+
+}
