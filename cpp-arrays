@@ -1,0 +1,47 @@
+#include<iostream>
+#include<string>
+using namespace std;
+const int cap=100;
+void fillarray(string a[],int& b);
+void print(const string a[],int& b);
+int main()
+{
+	//string color[]={"red","yellow","blue"};
+	//here you dont need to enter the size of the string
+	int i=0;
+	string color[cap];
+	//string input;
+	//cout<<"enter colors"<<endl;
+	//cin>>input;
+	/*while((input!="-1") &&(i<cap)){
+		color[i]=input;
+		i++;
+		cin>>input;
+		}
+	cout<<color[3];
+	*/
+	//this is to use arrays inside the main
+	fillarray(color,i);
+	print(color,i);
+	return 0;
+}
+void fillarray(string color[],int& i){
+
+	string col;
+	cout<<"enter colors(-1 to stop)";
+	cin>>col;
+
+	while((col!="-1")&&(i<cap)){
+		color[i]=col;
+		i++;
+		cin>>col;
+		}
+}
+void print(const string color[],int& i)
+{
+for(int j=0;j<i;j++)
+{	
+	cout<<color[j]<<" ";
+}
+	
+}
