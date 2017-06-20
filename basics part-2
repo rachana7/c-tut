@@ -1,0 +1,38 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+//constant declaration
+const double DISCOUNT=0.15;
+int main()
+{
+int rate=500;
+cout<<"price after discount is "<<rate*(1-DISCOUNT);
+
+
+//Formatting integers
+cout.set(ios::fixed);
+cout.set(ios::showpoint);
+cout.precision(2);
+
+
+//instead of these 3 lines we can include iomanip
+cout<<fixed<<showpoint<<precision(2)<<endl;
+
+//switch case 
+/*
+char a;
+cin>>a;
+switch(a)
+{
+case A:
+case a:
+printf("bla bla");
+break;
+//this works
+
+//strint s="its raining here says,"adam hiller"";   not right
+//its taken as an error :as as soon as "adam ..starts it feels it to be the end of the string
+//hence we use \ 
+string s="its raining here says,/"adam hiller/"";
+return 0;
+}
